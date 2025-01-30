@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rishabh Mishra Portfolio</title>
+    <title>Atif Gul Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Bootstrap Modal & jQuery (Already included in Bootstrap projects) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
 
@@ -110,11 +117,18 @@
 }
 
 .custom-img {
-    max-width: 600px;  /* Adjust the width as needed */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;  
-    margin-left: auto; /* Push image to right */
+	/* background-color: #FFBD39; */
+	height: 120vh;
+	margin-top: 5rem;
 }
+
+/* Medium and large devices ke liye image ko right side per shift karein */
+@media (max-width: 1000px) { /* Tablets and above */
+    .custom-img {
+		display: none !important;
+    }
+}
+
 
 
 </style>
@@ -146,10 +160,10 @@
 		  <div class="slider-item">
 			<div class="overlay"></div>
 			<div class="container">
-			  <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-between" data-scrollax-parent="true">
+			  <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;" data-scrollax-parent="true">
 				
 				<!-- Left Side Content -->
-				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+				<div class= "slider-text one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 				  <div class="text">
 					<span class="subheading">Hello!</span>
 					<h1 class="mb-4 mt-3">I'm <span>Atif Gul</span></h1>
@@ -183,9 +197,9 @@
 				</div>
 	  
 				<!-- Right Side Image -->
-				<!-- <div class="one-third order-md-last ">
+			  <div class="one-third order-md-last img ">
 				  <img src="images/bg_1.png" class="img-fluid custom-img" alt="Atif Gul">
-				</div> -->
+				</div> 
 	  
 			  </div>
 			</div>
@@ -313,70 +327,526 @@
 
 
 
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Web & App Projects.</p>
-          </div>
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Projects</h1>
+			  <h2 class="mb-4">Projects</h2>
+			  <p>Below are the sample Web & App Projects.</p>
+			</div>
+		  </div>
+		  <h2 style="font-weight: bold;">Web <span style="color: #FFBD39;">Projects</span></h2>
+		  <hr style="background-color: #FFBD39;">
+	  
+		  <div class="row d-flex">
+			<!-- Project 1 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/bookstore1.jpg');" data-target="#projectModal1" data-toggle="modal"></a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a>Lorem Ipsum Project 1</a></h3>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Project 2 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/school1.jpg');" data-target="#projectModal2" data-toggle="modal"></a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+				  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Project 3 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/social2.jpg');" data-target="#projectModal3" data-toggle="modal"></a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a>Lorem Ipsum Project 3</a></h3>
+				  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Project 4 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/appointment.jpg');" data-target="#projectModal4" data-toggle="modal"></a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+				  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			  </div>
+			</div>
+			
+			</div>
+			<h2 style="font-weight: bold;">Video <span style="color: #FFBD39;">Samples</span></h2>
+
+			<hr style="background-color: #FFBD39;">
+			<div class="row d-flex">
+<!-- Video Project Thumbnail -->
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry justify-content-end">
+        <a class="block-20 zoom-effect project-video-thumbnail" 
+           style="background-image: url('images/Projectimages/thm1.jpg');" 
+           data-toggle="modal" 
+           data-target="#videoModal1"
+           >
+        </a>
+        <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a>Project Video</a></h3>
+            <p>Click on the image to watch the project video.</p>
         </div>
-		<div class="row d-flex">
+    </div>
+</div>
+<!-- Video Project Thumbnail -->
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry justify-content-end">
+        <a class="block-20 zoom-effect project-video-thumbnail" 
+           style="background-image: url('images/Projectimages/thm2.jpg');" 
+           data-toggle="modal" 
+           data-target="#videoModal2"
+           >
+        </a>
+        <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a>Project Video</a></h3>
+            <p>Click on the image to watch the project video.</p>
+        </div>
+    </div>
+</div>
+<!-- Video Project Thumbnail -->
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry justify-content-end">
+        <a class="block-20 zoom-effect project-video-thumbnail" 
+           style="background-image: url('images/Projectimages/thm3.jpg');" 
+           data-toggle="modal" 
+           data-target="#videoModal3"
+           >
+        </a>
+        <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a>Project Video</a></h3>
+            <p>Click on the image to watch the project video.</p>
+        </div>
+    </div>
+</div>
+<!-- Video Project Thumbnail -->
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry justify-content-end">
+        <a class="block-20 zoom-effect project-video-thumbnail" 
+           style="background-image: url('images/Projectimages/thm4.jpg');" 
+           data-toggle="modal" 
+           data-target="#videoModal4"
+           >
+        </a>
+        <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a>Project Video</a></h3>
+            <p>Click on the image to watch the project video.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry justify-content-end">
+        <a class="block-20 zoom-effect project-video-thumbnail" 
+           style="background-image: url('images/Projectimages/thm5.jpg');" 
+           data-toggle="modal" 
+           data-target="#videoModal5"
+           >
+        </a>
+        <div class="text mt-3 float-right d-block">
+            <h3 class="heading"><a>Project Video</a></h3>
+            <p>Click on the image to watch the project video.</p>
+        </div>
+    </div>
+</div>
+
+			</div>
+			<h2 style="font-weight: bold;">App <span style="color: #FFBD39;">Projects</span></h2>
+
+			<hr style="background-color: #FFBD39;">
+			<div class="row d-flex">
+				<!-- Project 5 -->
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-					<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a>Lorem Ipsum Project 1</a></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at sapien eget nulla facilisis.</p>
-					</div>
+				  <a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/app2.jpg');" data-target="#projectModal5" data-toggle="modal"></a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+					<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				  </div>
 				</div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
+			  </div>
+			  <!-- Project 6 -->
+			  <div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-					<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
-						<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					</div>
+				  <a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/app4.jpg');" data-target="#projectModal6" data-toggle="modal"></a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+					<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				  </div>
 				</div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry">
-					<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a>Lorem Ipsum Project 3</a></h3>
-						<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
+			  </div>
+			  <!-- Project 7 -->
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/app8.jpg');" data-target="#projectModal7" data-toggle="modal"></a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+					<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				  </div>
 				</div>
+			  </div>
+			  <!-- Project 8 -->
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/app12.jpg');" data-target="#projectModal8" data-toggle="modal"></a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+					<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				  </div>
+				</div>
+			  </div>
+			  <!-- Project 9 -->
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a class="block-20 zoom-effect project-img" style="background-image: url('images/Projectimages/app13.jpg');" data-target="#projectModal9" data-toggle="modal"></a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a>Lorem Ipsum Project 2</a></h3>
+					<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				  </div>
+				</div>
+			  </div>
 			</div>
+
 		</div>
-		
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a>Lorem Ipsum Project 4</a></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id purus vitae libero feugiat euismod.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a>Lorem Ipsum Project 5</a></h3>
-						<p>Curabitur quis nisi et nisl tincidunt malesuada. Vivamus vehicula purus a velit tincidunt, et interdum purus malesuada.</p>
-					</div>
-				</div>
-			</div>
+	  </section>
+	  
+
+
+	  <!-- Project 1 Modal -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 1 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
 		</div>
-		
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/bookstore1.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/bookstore2.jpg" class="img-fluid" alt="Project 1 Image 2">
+			<img src="images/Projectimages/bookstore3.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore4.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore5.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore6.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore7.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore8.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore9.jpg" class="img-fluid" alt="Project 1 Image 3">
+			<img src="images/Projectimages/bookstore10.jpg" class="img-fluid" alt="Project 1 Image 3">
+		  </div>
+		</div>
 	  </div>
-    </section>
+	</div>
+  </div>
+  
+  <!-- Project 2 Modal -->
+  <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal2Label">Project 2 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/school1.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school2.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school3.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school4.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school5.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school6.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school7.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school8.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school9.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school10.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school11.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school12.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school13.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school14.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school15.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school16.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school17.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school18.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school19.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school20.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school21.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school22.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school23.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school24.jpg" class="img-fluid" alt="Project 2 Image 1">
+			<img src="images/Projectimages/school25.jpg" class="img-fluid" alt="Project 2 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  	  <!-- Project 3 Modal -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/social2.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social3.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social4.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social5.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social6.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social7.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/social8.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 4 Modal -->
+<div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/appointment.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/appointment2.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 5 Modal -->
+<div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/app2.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app3.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 6 Modal -->
+<div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/app4.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app5.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app6.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app7.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app10.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app11.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 7 Modal -->
+<div class="modal fade" id="projectModal7" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/app8.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app9.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 8 Modal -->
+<div class="modal fade" id="projectModal8" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/app12.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app12.1.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app17.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app18jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  	  <!-- Project 9 Modal -->
+<div class="modal fade" id="projectModal9" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="projectModal1Label">Project 3 Details</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="owl-carousel project-slider">
+			<img src="images/Projectimages/app13.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app14.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app15.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app16.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app19.jpg" class="img-fluid" alt="Project 1 Image 1">
+			<img src="images/Projectimages/app20.jpg" class="img-fluid" alt="Project 1 Image 1">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="videoModalLabel">Project Video</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <video id="videoPlayer" class="embed-responsive" width="100%" controls>
+			<source src="./images/Projectimages/video1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="videoModalLabel">Project Video</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <video id="videoPlayer" class="embed-responsive" width="100%" controls>
+			<source src="./images/Projectimages/video2.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="videoModalLabel">Project Video</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <video id="videoPlayer" class="embed-responsive" width="100%" controls>
+			<source src="./images/Projectimages/video3.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal4" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="videoModalLabel">Project Video</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <video id="videoPlayer" class="embed-responsive" width="100%" controls>
+			<source src="./images/Projectimages/video4.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+	</div>
+</div>
+
+  <!-- Video Modal -->
+<div class="modal fade" id="videoModal5" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="videoModalLabel">Project Video</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <video id="videoPlayer" class="embed-responsive" width="100%" controls>
+			<source src="./images/Projectimages/video5.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+	</div>
+</div>
+
 
 	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
@@ -525,6 +995,36 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-    
+    <script>
+  $(document).ready(function(){
+    $(".project-slider").owlCarousel({
+      items: 1, 
+      loop: true, 
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 3000
+    });
+  });
+	$(document).ready(function(){
+	  var videoSrc = "";
+  
+	  $(".project-video-thumbnail").click(function() {
+		  videoSrc = $(this).data("video");
+		  $("#videoFrame").attr("src", videoSrc + "?autoplay=1");
+	  });
+  
+	  $("#videoModal").on("hidden.bs.modal", function() {
+		  $("#videoFrame").attr("src", "");
+	  });
+	});
+  
+	$(document).ready(function(){
+	  $("#videoModal").on("hidden.bs.modal", function() {
+		  $("#mp4Video")[0].pause();
+	  });
+	});
+  </script>
+  
   </body>
 </html>
